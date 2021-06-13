@@ -28,14 +28,54 @@
         </a>
 
         <nav>
+            <?php
+            $activeNavbarClass = '';
+            if (request()->routeIs('overview')) {
+            $activeNavbarClass = 'nav_item_active';
+            }
+            ?>
             <ul class="nav__links">
-                <li><a href="{{ route('overview') }}">Overview</a></li>
-                <li><a href="{{ route('recruitment') }}">Recruitment</a></li>
-                <li><a href="{{ route('budgeting') }}">Budgeting</a></li>
-                <li><a href="{{ route('revenue') }}">Revenue</a></li>
-                <li><a href="{{ route('financial-statement') }}">Financial Statements</a></li>
-                <li><a href="{{ route('decision-driven') }}">Dicision Driven</a></li>
-                <li><a href="{{ route('overview') }}">Course Points</a></li>
+                <li>
+                    <a class="{{ request()->routeIs('overview') ? 'nav_item_active' : '' }}"
+                        href="{{ route('overview') }}">
+                        Overview
+                    </a>
+                </li>
+                <li>
+                    <a class="{{ request()->routeIs('recruitment') ? 'nav_item_active' : '' }}"
+                        href="{{ route('recruitment') }}">
+                        Recruitment
+                    </a>
+                </li>
+                <li>
+                    <a class="{{ request()->routeIs('budgeting') ? 'nav_item_active' : '' }}"
+                        href="{{ route('budgeting') }}">
+                        Budgeting
+                    </a>
+                </li>
+                <li>
+                    <a class="{{ request()->routeIs('revenue') ? 'nav_item_active' : '' }}"
+                        href="{{ route('revenue') }}">
+                        Revenue
+                    </a>
+                </li>
+                <li>
+                    <a class="{{ request()->routeIs('financial-statement') ? 'nav_item_active' : '' }}"
+                        href="{{ route('financial-statement') }}">
+                        Financial Statements
+                    </a>
+                </li>
+                <li>
+                    <a class="{{ request()->routeIs('decision-driven') ? 'nav_item_active' : '' }}"
+                        href="{{ route('decision-driven') }}">
+                        Dicision Driven
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="{{ route('overview') }}">
+                        Course Points
+                    </a>
+                </li>
             </ul>
         </nav>
 

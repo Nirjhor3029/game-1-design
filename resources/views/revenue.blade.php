@@ -26,272 +26,551 @@
 
         <div class="details">
             <div class="revenue-tabs">
-                <a href="" class="btn btn-revenue-tabs btn-bd">Revenue BD</a>
-                <a href="" class="btn btn-revenue-tabs btn-np">Revenue NP</a>
-                <a href="" class="btn btn-revenue-tabs btn-chart">Revenue Chart</a>
+                <a href="javascript:void(0)" id="btn-bd" class="btn btn-revenue-tabs btn-bd bd-active">Revenue BD</a>
+                <a href="javascript:void(0)" id="btn-np" class="btn btn-revenue-tabs btn-np">Revenue NP</a>
+                <a href="javascript:void(0)" id="btn-chart" class="btn btn-revenue-tabs btn-chart">Revenue
+                    Chart</a>
             </div>
 
-            <div class="row product-box">
-                <div class="col-md-5">
-                    <div class="card">
-                        <div class="card-header">
-                            Product A
-                        </div>
-                        <div class="card-body">
-                            <div class="input_field row">
-                                <div class="col-md-7">
-                                    <div class="handle-counter" id="bd_A_pc_handleCounter">
-                                        <button class="counter-minus btn">-</button>
-                                        <input type="text" value="0">
-                                        <button class="counter-plus btn">+</button>
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <p>Production cost</p>
-                                </div>
+            {{-- BD --}}
+            <div class="bd">
+                <div class="row  product-box">
+                    <div class="col-md-5">
+                        <div class="card">
+                            <div class="card-header">
+                                Product A
                             </div>
-
-                            <div class="input_field row">
-                                <div class="col-md-7">
-                                    <div class="handle-counter" id="bd_A_opx_handleCounter">
-                                        <button class="counter-minus btn">-</button>
-                                        <input type="text" value="0">
-                                        <button class="counter-plus btn">+</button>
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <p>OPEX</p>
-                                </div>
-                            </div>
-
-                            <div class="input_field row">
-                                <div class="col-md-7">
-                                    <div class="handle-counter" id="bd_A_tc_handleCounter">
-                                        <button class="counter-minus btn">-</button>
-                                        <input type="text" value="0">
-                                        <button class="counter-plus btn">+</button>
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <p>Total cost</p>
-                                </div>
-                            </div>
-
-                            <div class="input_field row">
-                                <div class="col-md-7">
-                                    <div class="handle-counter" id="bd_A_cp_handleCounter">
-                                        <button class="counter-minus btn">-</button>
-                                        <input type="text" value="0">
-                                        <button class="counter-plus btn">+</button>
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <p>Competitor’s Price</p>
-                                </div>
-                            </div>
-
-                            <div class="row mb-10">
-                                <div class="col-md-7">
-                                    <div class="row ml-0 mr-0">
-                                        <div class="col-3 col-sm-3 markup-txt">
-                                            <p><span class="markup_number" id="bd_pa_markup_number"></span>%</p>
-                                        </div>
-                                        <div class="col-9 col-sm-9 slidecontainer">
-                                            <input type="range" min="1" max="100" value="50" class="slider"
-                                                id="bd_pa_markup_range">
+                            <div class="card-body">
+                                <div class="input_field row">
+                                    <div class="col-md-7">
+                                        <div class="handle-counter" id="bd_A_pc_handleCounter">
+                                            <button class="counter-minus btn">-</button>
+                                            <input type="text" value="0">
+                                            <button class="counter-plus btn">+</button>
                                         </div>
                                     </div>
-
-                                </div>
-                                <div class="col-md-5">
-                                    <p>Mark up %</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-7 price">
-                                    <p class="price-txt">Price:</p>
-                                    <div class="price-input">
-                                        <input type="number" value="0">
+                                    <div class="col-md-5">
+                                        <p>Production cost</p>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
 
+                                <div class="input_field row">
+                                    <div class="col-md-7">
+                                        <div class="handle-counter" id="bd_A_opx_handleCounter">
+                                            <button class="counter-minus btn">-</button>
+                                            <input type="text" value="0">
+                                            <button class="counter-plus btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>OPEX</p>
+                                    </div>
                                 </div>
+
+                                <div class="input_field row">
+                                    <div class="col-md-7">
+                                        <div class="handle-counter" id="bd_A_tc_handleCounter">
+                                            <button class="counter-minus btn">-</button>
+                                            <input type="text" value="0">
+                                            <button class="counter-plus btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>Total cost</p>
+                                    </div>
+                                </div>
+
+                                <div class="input_field row">
+                                    <div class="col-md-7">
+                                        <div class="handle-counter" id="bd_A_cp_handleCounter">
+                                            <button class="counter-minus btn">-</button>
+                                            <input type="text" value="0">
+                                            <button class="counter-plus btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>Competitor’s Price</p>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-10">
+                                    <div class="col-md-7">
+                                        <div class="row ml-0 mr-0">
+                                            <div class="col-3 col-sm-3 markup-txt">
+                                                <p><span class="markup_number" id="bd_pa_markup_number"></span>%</p>
+                                            </div>
+                                            <div class="col-9 col-sm-9 slidecontainer">
+                                                <input type="range" min="1" max="100" value="50" class="slider"
+                                                    id="bd_pa_markup_range">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>Mark up %</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-7 price">
+                                        <p class="price-txt">Price:</p>
+                                        <div class="price-input">
+                                            <input type="number" value="0">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+
+                                    </div>
+                                </div>
+
                             </div>
+                        </div>
 
+                        <div class="unit_sold">
+                            <div class="txt">
+                                Units Sold
+                            </div>
+                            <div class="radio_btn">
+                                <label class="radio_lbl" for="radio_0">
+                                    <input type="radio" class="radio_input" id="radio_0" name="unit_sold_radio" value="0">
+                                    <p>0</p>
+                                </label>
+                                <label class="radio_lbl" for="radio_20">
+                                    <input type="radio" class="radio_input" id="radio_20" name="unit_sold_radio" value="20">
+                                    <p>20</p>
+                                </label>
+                                <label class="radio_lbl" for="radio_30">
+                                    <input type="radio" class="radio_input" id="radio_30" name="unit_sold_radio" value="30">
+                                    <p>30</p>
+                                </label>
+                                <label class="radio_lbl" for="radio_40">
+                                    <input type="radio" class="radio_input" id="radio_40" name="unit_sold_radio" value="40">
+                                    <p>40</p>
+                                </label>
+                                <label class="radio_lbl" for="radio_50">
+                                    <input type="radio" class="radio_input" id="radio_50" name="unit_sold_radio" value="50">
+                                    <p>50</p>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="unit_sold">
+                            <div class="txt">
+                                Revenue
+                            </div>
+                            <div class="radio_btn">
+                                <input class="revenue_input" type="text" value="0">
+                            </div>
                         </div>
                     </div>
+                    <div class="col-md-5">
+                        <div class="card">
+                            <div class="card-header">
+                                Product B
+                            </div>
+                            <div class="card-body">
+                                <div class="input_field row">
+                                    <div class="col-md-7">
+                                        <div class="handle-counter" id="bd_B_pc_handleCounter">
+                                            <button class="counter-minus btn">-</button>
+                                            <input type="text" value="0">
+                                            <button class="counter-plus btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>Production cost</p>
+                                    </div>
+                                </div>
 
-                    <div class="unit_sold">
-                        <div class="txt">
-                            Units Sold
-                        </div>
-                        <div class="radio_btn">
-                            <label class="radio_lbl" for="radio_0">
-                                <input type="radio" class="radio_input" id="radio_0" name="unit_sold_radio" value="0">
-                                <p>0</p>
-                            </label>
-                            <label class="radio_lbl" for="radio_20">
-                                <input type="radio" class="radio_input" id="radio_20" name="unit_sold_radio" value="20">
-                                <p>20</p>
-                            </label>
-                            <label class="radio_lbl" for="radio_30">
-                                <input type="radio" class="radio_input" id="radio_30" name="unit_sold_radio" value="30">
-                                <p>30</p>
-                            </label>
-                            <label class="radio_lbl" for="radio_40">
-                                <input type="radio" class="radio_input" id="radio_40" name="unit_sold_radio" value="40">
-                                <p>40</p>
-                            </label>
-                            <label class="radio_lbl" for="radio_50">
-                                <input type="radio" class="radio_input" id="radio_50" name="unit_sold_radio" value="50">
-                                <p>50</p>
-                            </label>
-                        </div>
-                    </div>
+                                <div class="input_field row">
+                                    <div class="col-md-7">
+                                        <div class="handle-counter" id="bd_B_opx_handleCounter">
+                                            <button class="counter-minus btn">-</button>
+                                            <input type="text" value="0">
+                                            <button class="counter-plus btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>OPEX</p>
+                                    </div>
+                                </div>
 
-                    <div class="unit_sold">
-                        <div class="txt">
-                            Revenue
+                                <div class="input_field row">
+                                    <div class="col-md-7">
+                                        <div class="handle-counter" id="bd_B_tc_handleCounter">
+                                            <button class="counter-minus btn">-</button>
+                                            <input type="text" value="0">
+                                            <button class="counter-plus btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>Total cost</p>
+                                    </div>
+                                </div>
+
+                                <div class="input_field row">
+                                    <div class="col-md-7">
+                                        <div class="handle-counter" id="bd_B_cp__handleCounter">
+                                            <button class="counter-minus btn">-</button>
+                                            <input type="text" value="0">
+                                            <button class="counter-plus btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>Competitor’s Price</p>
+                                    </div>
+                                </div>
+
+
+                                <div class="row mb-10">
+                                    <div class="col-md-7">
+                                        <div class="row ml-0 mr-0">
+                                            <div class="col-3 col-sm-3 markup-txt">
+                                                <p><span class="markup_number" id="bd_pb_markup_number"></span>%</p>
+                                            </div>
+                                            <div class="col-9 col-sm-9 slidecontainer">
+                                                <input type="range" min="1" max="100" value="50" class="slider"
+                                                    id="bd_pb_markup_range">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>Mark up %</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-7 price">
+                                        <p class="price-txt">Price:</p>
+                                        <div class="price-input">
+                                            <input type="number" value="0">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                        <div class="radio_btn">
-                            <input class="revenue_input" type="text" value="0">
+
+                        <div class="unit_sold">
+                            <div class="txt">
+                                Units Sold
+                            </div>
+                            <div class="radio_btn">
+                                <label class="radio_lbl" for="radio_bdb_0">
+                                    <input type="radio" class="radio_input" id="radio_bdb_0" name="unit_sold_bd_b_radio"
+                                        value="0">
+                                    <p>0</p>
+                                </label>
+                                <label class="radio_lbl" for="radio_bdb_20">
+                                    <input type="radio" class="radio_input" id="radio_bdb_20" name="unit_sold_bd_b_radio"
+                                        value="20">
+                                    <p>20</p>
+                                </label>
+                                <label class="radio_lbl" for="radio_bdb_30">
+                                    <input type="radio" class="radio_input" id="radio_bdb_30" name="unit_sold_bd_b_radio"
+                                        value="30">
+                                    <p>30</p>
+                                </label>
+                                <label class="radio_lbl" for="radio_bdb_40">
+                                    <input type="radio" class="radio_input" id="radio_bdb_40" name="unit_sold_bd_b_radio"
+                                        value="40">
+                                    <p>40</p>
+                                </label>
+                                <label class="radio_lbl" for="radio_bdb_50">
+                                    <input type="radio" class="radio_input" id="radio_bdb_50" name="unit_sold_bd_b_radio"
+                                        value="50">
+                                    <p>50</p>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="unit_sold">
+                            <div class="txt">
+                                Revenue
+                            </div>
+                            <div class="radio_btn">
+                                <input class="revenue_input" type="text" value="0">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-5">
-                    <div class="card">
-                        <div class="card-header">
-                            Product B
-                        </div>
-                        <div class="card-body">
-                            <div class="input_field row">
-                                <div class="col-md-7">
-                                    <div class="handle-counter" id="bd_B_pc_handleCounter">
-                                        <button class="counter-minus btn">-</button>
-                                        <input type="text" value="0">
-                                        <button class="counter-plus btn">+</button>
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <p>Production cost</p>
-                                </div>
+            </div>
+
+
+
+            {{-- NP --}}
+            <div class="np">
+                <div class="row  product-box">
+                    <div class="col-md-5">
+                        <div class="card">
+                            <div class="card-header">
+                                Product A
                             </div>
-
-                            <div class="input_field row">
-                                <div class="col-md-7">
-                                    <div class="handle-counter" id="bd_B_opx_handleCounter">
-                                        <button class="counter-minus btn">-</button>
-                                        <input type="text" value="0">
-                                        <button class="counter-plus btn">+</button>
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <p>OPEX</p>
-                                </div>
-                            </div>
-
-                            <div class="input_field row">
-                                <div class="col-md-7">
-                                    <div class="handle-counter" id="bd_B_tc_handleCounter">
-                                        <button class="counter-minus btn">-</button>
-                                        <input type="text" value="0">
-                                        <button class="counter-plus btn">+</button>
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <p>Total cost</p>
-                                </div>
-                            </div>
-
-                            <div class="input_field row">
-                                <div class="col-md-7">
-                                    <div class="handle-counter" id="bd_B_cp__handleCounter">
-                                        <button class="counter-minus btn">-</button>
-                                        <input type="text" value="0">
-                                        <button class="counter-plus btn">+</button>
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <p>Competitor’s Price</p>
-                                </div>
-                            </div>
-
-
-                            <div class="row mb-10">
-                                <div class="col-md-7">
-                                    <div class="row ml-0 mr-0">
-                                        <div class="col-3 col-sm-3 markup-txt">
-                                            <p><span class="markup_number" id="bd_pb_markup_number"></span>%</p>
-                                        </div>
-                                        <div class="col-9 col-sm-9 slidecontainer">
-                                            <input type="range" min="1" max="100" value="50" class="slider"
-                                                id="bd_pb_markup_range">
+                            <div class="card-body">
+                                <div class="input_field row">
+                                    <div class="col-md-7">
+                                        <div class="handle-counter" id="np_A_pc_handleCounter">
+                                            <button class="counter-minus btn">-</button>
+                                            <input type="text" value="0">
+                                            <button class="counter-plus btn">+</button>
                                         </div>
                                     </div>
-
-                                </div>
-                                <div class="col-md-5">
-                                    <p>Mark up %</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-7 price">
-                                    <p class="price-txt">Price:</p>
-                                    <div class="price-input">
-                                        <input type="number" value="0">
+                                    <div class="col-md-5">
+                                        <p>Production cost</p>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
 
+                                <div class="input_field row">
+                                    <div class="col-md-7">
+                                        <div class="handle-counter" id="np_A_opx_handleCounter">
+                                            <button class="counter-minus btn">-</button>
+                                            <input type="text" value="0">
+                                            <button class="counter-plus btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>OPEX</p>
+                                    </div>
                                 </div>
+
+                                <div class="input_field row">
+                                    <div class="col-md-7">
+                                        <div class="handle-counter" id="np_A_tc_handleCounter">
+                                            <button class="counter-minus btn">-</button>
+                                            <input type="text" value="0">
+                                            <button class="counter-plus btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>Total cost</p>
+                                    </div>
+                                </div>
+
+                                <div class="input_field row">
+                                    <div class="col-md-7">
+                                        <div class="handle-counter" id="np_A_cp_handleCounter">
+                                            <button class="counter-minus btn">-</button>
+                                            <input type="text" value="0">
+                                            <button class="counter-plus btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>Competitor’s Price</p>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-10">
+                                    <div class="col-md-7">
+                                        <div class="row ml-0 mr-0">
+                                            <div class="col-3 col-sm-3 markup-txt">
+                                                <p><span class="markup_number" id="np_pa_markup_number"></span>%</p>
+                                            </div>
+                                            <div class="col-9 col-sm-9 slidecontainer">
+                                                <input type="range" min="1" max="100" value="50" class="slider"
+                                                    id="np_pa_markup_range">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>Mark up %</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-7 price">
+                                        <p class="price-txt">Price:</p>
+                                        <div class="price-input">
+                                            <input type="number" value="0">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+
+                                    </div>
+                                </div>
+
                             </div>
+                        </div>
 
+                        <div class="unit_sold">
+                            <div class="txt">
+                                Units Sold
+                            </div>
+                            <div class="radio_btn">
+                                <label class="radio_lbl" for="radio_np_0">
+                                    <input type="radio" class="radio_input" id="radio_np_0" name="np_unit_sold_radio"
+                                        value="0">
+                                    <p>0</p>
+                                </label>
+                                <label class="radio_lbl" for="radio_np_20">
+                                    <input type="radio" class="radio_input" id="radio_np_20" name="np_unit_sold_radio"
+                                        value="20">
+                                    <p>20</p>
+                                </label>
+                                <label class="radio_lbl" for="radio_np_30">
+                                    <input type="radio" class="radio_input" id="radio_np_30" name="np_unit_sold_radio"
+                                        value="30">
+                                    <p>30</p>
+                                </label>
+                                <label class="radio_lbl" for="radio_np_40">
+                                    <input type="radio" class="radio_input" id="radio_np_40" name="np_unit_sold_radio"
+                                        value="40">
+                                    <p>40</p>
+                                </label>
+                                <label class="radio_lbl" for="radio_np_50">
+                                    <input type="radio" class="radio_input" id="radio_np_50" name="np_unit_sold_radio"
+                                        value="50">
+                                    <p>50</p>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="unit_sold">
+                            <div class="txt">
+                                Revenue
+                            </div>
+                            <div class="radio_btn">
+                                <input class="revenue_input" type="text" value="0">
+                            </div>
                         </div>
                     </div>
+                    <div class="col-md-5">
+                        <div class="card">
+                            <div class="card-header">
+                                Product B
+                            </div>
+                            <div class="card-body">
+                                <div class="input_field row">
+                                    <div class="col-md-7">
+                                        <div class="handle-counter" id="np_B_pc_handleCounter">
+                                            <button class="counter-minus btn">-</button>
+                                            <input type="text" value="0">
+                                            <button class="counter-plus btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>Production cost</p>
+                                    </div>
+                                </div>
 
-                    <div class="unit_sold">
-                        <div class="txt">
-                            Units Sold
-                        </div>
-                        <div class="radio_btn">
-                            <label class="radio_lbl" for="radio_bdb_0">
-                                <input type="radio" class="radio_input" id="radio_0" name="unit_sold_bd_b_radio" value="0">
-                                <p>0</p>
-                            </label>
-                            <label class="radio_lbl" for="radio_bdb_20">
-                                <input type="radio" class="radio_input" id="radio_bdb_20" name="unit_sold_bd_b_radio"
-                                    value="20">
-                                <p>20</p>
-                            </label>
-                            <label class="radio_lbl" for="radio_bdb_30">
-                                <input type="radio" class="radio_input" id="radio_bdb_30" name="unit_sold_bd_b_radio"
-                                    value="30">
-                                <p>30</p>
-                            </label>
-                            <label class="radio_lbl" for="radio_bdb_40">
-                                <input type="radio" class="radio_input" id="radio_bdb_40" name="unit_sold_bd_b_radio"
-                                    value="40">
-                                <p>40</p>
-                            </label>
-                            <label class="radio_lbl" for="radio_bdb_50">
-                                <input type="radio" class="radio_input" id="radio_bdb_50" name="unit_sold_bd_b_radio"
-                                    value="50">
-                                <p>50</p>
-                            </label>
-                        </div>
-                    </div>
+                                <div class="input_field row">
+                                    <div class="col-md-7">
+                                        <div class="handle-counter" id="np_B_opx_handleCounter">
+                                            <button class="counter-minus btn">-</button>
+                                            <input type="text" value="0">
+                                            <button class="counter-plus btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>OPEX</p>
+                                    </div>
+                                </div>
 
-                    <div class="unit_sold">
-                        <div class="txt">
-                            Revenue
+                                <div class="input_field row">
+                                    <div class="col-md-7">
+                                        <div class="handle-counter" id="np_B_tc_handleCounter">
+                                            <button class="counter-minus btn">-</button>
+                                            <input type="text" value="0">
+                                            <button class="counter-plus btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>Total cost</p>
+                                    </div>
+                                </div>
+
+                                <div class="input_field row">
+                                    <div class="col-md-7">
+                                        <div class="handle-counter" id="np_B_cp__handleCounter">
+                                            <button class="counter-minus btn">-</button>
+                                            <input type="text" value="0">
+                                            <button class="counter-plus btn">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>Competitor’s Price</p>
+                                    </div>
+                                </div>
+
+
+                                <div class="row mb-10">
+                                    <div class="col-md-7">
+                                        <div class="row ml-0 mr-0">
+                                            <div class="col-3 col-sm-3 markup-txt">
+                                                <p><span class="markup_number" id="np_pb_markup_number"></span>%</p>
+                                            </div>
+                                            <div class="col-9 col-sm-9 slidecontainer">
+                                                <input type="range" min="1" max="100" value="50" class="slider"
+                                                    id="np_pb_markup_range">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>Mark up %</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-7 price">
+                                        <p class="price-txt">Price:</p>
+                                        <div class="price-input">
+                                            <input type="number" value="0">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                        <div class="radio_btn">
-                            <input class="revenue_input" type="text" value="0">
+
+                        <div class="unit_sold">
+                            <div class="txt">
+                                Units Sold
+                            </div>
+                            <div class="radio_btn">
+                                <label class="radio_lbl" for="radio_npb_0">
+                                    <input type="radio" class="radio_input" id="radio_npb_0" name="unit_sold_np_b_radio"
+                                        value="0">
+                                    <p>0</p>
+                                </label>
+                                <label class="radio_lbl" for="radio_npb_20">
+                                    <input type="radio" class="radio_input" id="radio_npb_20" name="unit_sold_np_b_radio"
+                                        value="20">
+                                    <p>20</p>
+                                </label>
+                                <label class="radio_lbl" for="radio_npb_30">
+                                    <input type="radio" class="radio_input" id="radio_npb_30" name="unit_sold_np_b_radio"
+                                        value="30">
+                                    <p>30</p>
+                                </label>
+                                <label class="radio_lbl" for="radio_npb_40">
+                                    <input type="radio" class="radio_input" id="radio_npb_40" name="unit_sold_np_b_radio"
+                                        value="40">
+                                    <p>40</p>
+                                </label>
+                                <label class="radio_lbl" for="radio_npb_50">
+                                    <input type="radio" class="radio_input" id="radio_npb_50" name="unit_sold_np_b_radio"
+                                        value="50">
+                                    <p>50</p>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="unit_sold">
+                            <div class="txt">
+                                Revenue
+                            </div>
+                            <div class="radio_btn">
+                                <input class="revenue_input" type="text" value="0">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
 
         <div class="prev_next_div">
@@ -421,7 +700,67 @@
             }
 
 
+
             // NP
+            output_np_pa.innerHTML = slider_np_pa.value;
+            slider_np_pa.oninput = function() {
+                output_np_pa.innerHTML = this.value;
+            }
+            output_np_pb.innerHTML = slider_np_pb.value;
+            slider_np_pb.oninput = function() {
+                output_np_pb.innerHTML = this.value;
+            }
+
+
+            $(document).ready(function() {
+                let btnBd = $("#btn-bd");
+                let btnNp = $("#btn-np");
+                let btnChart = $("#btn-chart");
+
+                let bd = $(".bd");
+                let np = $(".np");
+                let chart = $(".chart");
+
+                btnBd.click(function() {
+                    let that = $(this);
+                    if (!that.hasClass("bd-active")) {
+                        that.addClass("bd-active");
+                        btnNp.removeClass("np-active");
+                        btnChart.removeClass("chart-active");
+
+                        bd.show()
+                        np.hide();
+                        chart.hide();
+                    }
+                });
+                btnNp.click(function() {
+                    let that = $(this);
+                    if (!that.hasClass("np-active")) {
+
+                        btnBd.removeClass("bd-active");
+                        that.addClass("np-active");
+                        btnChart.removeClass("chart-active");
+
+                        bd.hide()
+                        np.show();
+                        chart.hide();
+                    }
+                });
+                btnChart.click(function() {
+                    let that = $(this);
+                    if (!that.hasClass("chart-active")) {
+
+                        btnBd.removeClass("bd-active");
+                        btnNp.removeClass("np-active");
+                        that.addClass("chart-active");
+
+                        bd.hide()
+                        np.hide();
+                        chart.show();
+                    }
+                });
+
+            });
 
         </script>
     </div>

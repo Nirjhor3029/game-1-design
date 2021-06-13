@@ -20,13 +20,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
     font-family: "Roboto", sans-serif;
-    color: var(--default-font-color) !important;
+
 }
 
 body{
     background-color: var(--full-body-bg-color);
+    color: var(--default-font-color);
 }
 
 
@@ -75,12 +75,17 @@ body{
 .nav__links li a{
     transition: all 0.3s ease 0s;
     padding: 32px 0;
+    color: var(--default-font-color);
 }
 
-.nav__links li a:hover{
-    color: var(--secondary-color);
+.nav__links li a:hover,.nav_item_active{
+    color: var(--secondary-color) !important;
     border-bottom: 4px solid var(--secondary-color);
 }
+/* .nav_item_active{
+    color: var(--secondary-color) !important;
+    border-bottom: 4px solid var(--secondary-color);
+} */
 /* Header Design -End */
 .main-content{
     margin: 0 var(--margin-leftright);
@@ -274,6 +279,7 @@ body{
     display: flex;
     justify-content: space-between;
     background-color: #4AD179;
+    color: #fff;
 }
 .budgeting .budget-box .input_field{
     display: flex;
@@ -326,7 +332,7 @@ body{
     border-color: #4AD179;
     color: #4AD179 !important;
 }
-.btn-bd:hover{
+.btn-bd:hover,.bd-active{
     background: #4AD179 0% 0% no-repeat padding-box;
     color: #FFFFFF !important;
 }
@@ -334,7 +340,7 @@ body{
     border-color: #ED375D;
     color: #ED375D !important;
 }
-.btn-np:hover{
+.btn-np:hover,.np-active{
     background: #ED375D 0% 0% no-repeat padding-box;
     color: #FFFFFF !important;
 }
@@ -342,7 +348,7 @@ body{
     border-color: #1DA3CB;
     color: #1DA3CB !important;
 }
-.btn-chart:hover{
+.btn-chart:hover,.chart-active{
     background: #1DA3CB 0% 0% no-repeat padding-box;
     color: #FFFFFF !important;
 }
@@ -383,6 +389,16 @@ body{
     justify-items: center;
     align-items: center;
     height: 100%;
+}
+
+/* NP */
+.revenue .np .card-header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ED375D;
+}
+.np{
+    display: none;
 }
 
 .unit_sold{
@@ -616,12 +632,13 @@ margin-left: 0;
     border-radius: 10px;
     opacity: 1;
     font-size: 28px;
-    color: #00C2FC !important;
+    color: #00C2FC;
 }
-.financial_statement .btn-fs:hover{
+.financial_statement .btn-fs:hover, .fs-active{
     background: #00C2FC 0% 0% no-repeat padding-box;
     color: #fff !important;
 }
+
 .financial_statement .btn-cfs{
     width: 100%;
     height: 74px;
@@ -629,9 +646,9 @@ margin-left: 0;
     border-radius: 10px;
     opacity: 1;
     font-size: 28px;
-    color: #13C3A1 !important;
+    color: #13C3A1;
 }
-.financial_statement .btn-cfs:hover{
+.financial_statement .btn-cfs:hover, .cfs-active{
     background: #13C3A1 0% 0% no-repeat padding-box;
     color: #fff !important;
 }
@@ -666,7 +683,8 @@ margin-left: 0;
     margin-right: auto;
 }
 
-.financial_statement .fs .card-footer{
+/* .financial_statement .fs .card-footer */
+.financial_statement  .card-footer{
     font-size: 28px;
     display: flex;
     justify-content: space-between;
@@ -721,6 +739,33 @@ margin-left: 0;
     font-size: 28px;
     font-weight: bold;
 
+}
+
+/* fs = financial statement & cfs = cash flow statement */
+
+.financial_statement .cfs{
+    display: none;
+}
+.financial_statement .cfs .net-cashflow{
+    font-size: 28px;
+    font-weight: bold;
+    padding: 20px;
+    background-color: var(--primary-color);
+    margin-top: 33px;
+    color: #fff !important;
+}
+
+.financial_statement .cfs .card-header{
+    background-color: #1EC3A1;
+    color: #fff !important;
+    font-size: 28px;
+    font-weight: bold;
+
+}
+.financial_statement .cfs-total-expenses{
+    display: flex;
+    justify-content: space-between;
+    font-size: 28px;
 }
 
 /* Financial Statement page -End */
